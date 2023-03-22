@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WordCount</title>
+</head>
+<body>
+    <h1>결과</h1>
+    {% for word,value in words %}
+        <a href="https://namu.wiki/w/{{word}}"><p>단어 : {{word}}&ensp; 갯수 : {{value}} </p></a>
+        <br>
+    {% endfor %}
+    <a href={% url 'main' %}>메인페이지로</a>
+</body>
+<style>
+    body{
+        text-align: center;
+    }
+    
+    a:hover{
+        color: green;
+    }
+</style>
+</html>
