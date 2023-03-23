@@ -7,19 +7,55 @@
     <title>WordCount</title>
 </head>
 <body>
-    <h1>Wordcount</h1>
-    <form action={% url 'result' %} method="GET">
-        <textarea name="text" id="" cols="40" rows="20"></textarea>
-        <button type="submit">COUNT</button>
-    </form>
-    <a href={% url 'about' %}>about</a>
+    <div class="container">
+        <header>        
+            <h1>Wordcount</h1>
+        </header>
+        <main>
+            <form action={% url 'result' %} method="GET">
+                <textarea name="text" id="" cols="40" rows="20"></textarea>
+                <br>
+                <button type="submit">COUNT</button>
+            </form>
+        </main>
+        <footer>
+            <a href={% url 'about' %}>about</a>
+        </footer>
+        
+    </div>
 </body>
 <style>
+    .container{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        gap: 2rem;
+    }
     body{
         text-align: center;
     }
+    header{
+        flex: 2;
+    }
+    main{
+        flex:6;
+    }
+    footer{
+        flex: 2;
+    }
     form{
         text-align: center;
+    }
+    textarea{
+        border-radius: 10px;
+    }
+    button{
+        width: 20%;
+    }
+    button:hover{
+        background-color: yellow;
     }
 </style>
 </html>
